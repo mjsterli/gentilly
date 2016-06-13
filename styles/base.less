@@ -107,11 +107,12 @@ atom-text-editor .search-results .marker.current-result .region,
   &.other.attribute-name {
     color: @lightest-gray;
 
-    &.id {
-      color: @blue;
-    }
-    &.html{
+    &.html {
       color: @gold;
+
+      &.id {
+        color: @hot-red;
+      }
     }
   }
 }
@@ -205,8 +206,6 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .variable {
-  color: @red;
-
   &.interpolation {
     color: darken(@red, 10%);
   }
@@ -278,13 +277,15 @@ atom-text-editor .search-results .marker.current-result .region,
 }
 
 .support {
+  &.dom {
+    color: @light-blue;
+  }
+
   &.class {
     color: @light-orange;
   }
 
   &.function  {
-    color: @cyan;
-
     &.any-method {
       color: @blue;
     }
